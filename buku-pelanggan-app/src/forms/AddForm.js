@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 
 const AddForm = (props) => {
-    const initialFormState = [
-        {
-            id: null,
-            nama: "",
-            bisnisName: "",
-            kontak: "",
-            email: "",
-            website: "",
-            alamat: "",
-        },
-    ];
-
+    const initialFormState = {
+        id: null,
+        name: "",
+        bisnisName: "",
+        kontak: "",
+        email: "",
+        website: "",
+        alamat: "",
+    };
     const [dataAdd, setDataAdd] = useState(initialFormState);
 
     // Handle Submit Data
@@ -22,6 +19,7 @@ const AddForm = (props) => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
+        if(!dataAdd.name || !dataAdd.bisnisName || !dataAdd.kontak || !dataAdd.email || !dataAdd.website || !dataAdd.alamat) return
         props.addData(dataAdd)
         setDataAdd(initialFormState);
     }
@@ -32,7 +30,7 @@ const AddForm = (props) => {
                 <label htmlFor="nama-pelanggan" 
                 className="block text-sm font-bold leading-6 text-gray-900">Nama Pelanggan</label>
                 <div className="mt-2">
-                    <input type="text" name="nama" value={dataAdd.name} 
+                    <input type="text" name="name" value={dataAdd.name} 
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" onChange={handleInputChange} />
                 </div>
             </div>

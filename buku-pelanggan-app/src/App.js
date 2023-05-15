@@ -6,7 +6,7 @@ function App() {
     const dataPelanggan = [
         {
             id: 1,
-            nama: "Agus",
+            name: "Agus",
             bisnisName: "Nama Bisnis",
             kontak: "Kontak",
             email: "Email",
@@ -15,7 +15,7 @@ function App() {
         },
         {
             id: 2,
-            nama: "Bayu",
+            name: "Bayu",
             bisnisName: "Nama Bisnis",
             kontak: "Kontak",
             email: "Email",
@@ -24,7 +24,7 @@ function App() {
         },
         {
             id: 3,
-            nama: "Cindy",
+            name: "Cindy",
             bisnisName: "Nama Bisnis",
             kontak: "Kontak",
             email: "Email",
@@ -38,12 +38,20 @@ function App() {
     // Add Data Pelanggan
     const addData = (data) => {
         data.id = datas.length + 1;
-        setData([...datas, data])
+        setData([...datas, data]);
+    };
+    // Delete Data Pelanggan
+    const deleteData = (id) => {
+        setData(datas.filter( (data) => {
+            return(
+                data.id !== id
+            )
+        }))
     }
     return (
         <div className="container mx-auto p-8" >
             <AddForm addData={addData} />
-            <CardUser dataObj={datas} />
+            <CardUser dataObj={datas} deleteData={deleteData} />
         </div>
     );
 }
