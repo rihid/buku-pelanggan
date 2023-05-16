@@ -13,7 +13,7 @@ const cardUser = (props) => (
                     </h5>
                     <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200">{data.bisnisName}</p>
                     <div>
-                        <button>Edit</button>
+                        <button onClick={ () => {props.editData(data)}}>Edit</button>
                         <button onClick={ () => {props.deleteData(data.id)}}>Delete</button>
                     </div>
                 </div>
