@@ -64,7 +64,7 @@ function App() {
         }))
     }
     return (
-        <div className='flex'>
+        <div className='flex bg-[#F3F3F3]'>
             <div className='basis-[20%] border'>
                 <SideNav />
             </div>
