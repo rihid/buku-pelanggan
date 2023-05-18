@@ -7,7 +7,7 @@ const TopNav = (props) => {
             <div className="flex items-center">
                 <div className="flex items-center h-[2rem] px-[.9rem] gap-2 bg-[#D9D9D9] rounded-full w-96">
                     <FaSearch color='#222426' />
-                    <input type="text" placeholder="Telusuri Pelanaggan..." className="outline-none bg-[#D9D9D9]" />
+                    <input type="text" placeholder="Telusuri Pelanaggan..." className="outline-none bg-[#D9D9D9] w-96" />
                 </div>
             </div>
             <div className="flex items-center gap-[2rem]">

@@ -4,11 +4,39 @@ import AddForm from './forms/AddForm';
 import EditDataForm from './forms/EditDataForm';
 import SideNav from './nav-menu/SideNav';
 import TopNav from './nav-menu/TopNav';
+import DetailUser from './users/DetailUser';
 
 function App() {
     const dataPelanggan = [
         {
             id: 1,
+            name: "Agus",
+            bisnisName: "Nama Bisnis",
+            kontak: "Kontak",
+            email: "Email",
+            website: "Website",
+            alamat: "Alamat",
+        },
+        {
+            id: 2,
+            name: "Agus",
+            bisnisName: "Nama Bisnis",
+            kontak: "Kontak",
+            email: "Email",
+            website: "Website",
+            alamat: "Alamat",
+        },
+        {
+            id: 3,
+            name: "Agus",
+            bisnisName: "Nama Bisnis",
+            kontak: "Kontak",
+            email: "Email",
+            website: "Website",
+            alamat: "Alamat",
+        },
+        {
+            id: 4,
             name: "Agus",
             bisnisName: "Nama Bisnis",
             kontak: "Kontak",
@@ -78,7 +106,13 @@ function App() {
                         <AddForm addData={addData} show={show} />
                     )} */}
                     <AddForm addData={addData} show={show} setShow={setShow} />
-                    <CardUser dataObj={datas} deleteData={deleteData} editData={editData} />
+                    <div className="pt-6">
+                        <CardUser dataObj={datas} deleteData={deleteData} editData={editData} />
+                    </div>
+                    <div className="pt-6">
+                        <DetailUser />
+                    </div>
+                    
                 </main>
             </div>
         </div>
