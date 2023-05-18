@@ -3,8 +3,8 @@ import React, { useState } from "react";
 const EditDataForm = (props) => {
     const [dataEdit, setDataEdit] = useState(props.currentData);
     const handleInputChange = (e) => {
-        const {name, value} = e.target;
-        setDataEdit({...dataEdit, [name]: value})
+        const {name, value} = e.target
+        setDataEdit({ ...dataEdit, [name]: value})
     }
     return(
         <form onSubmit={ (e) => {

@@ -2,30 +2,14 @@ import React, {useState} from 'react';
 import CardUser from './users/CardUser';
 import AddForm from './forms/AddForm';
 import EditDataForm from './forms/EditDataForm';
+import SideNav from './nav-menu/SideNav';
+import TopNav from './nav-menu/TopNav';
 
 function App() {
     const dataPelanggan = [
         {
             id: 1,
             name: "Agus",
-            bisnisName: "Nama Bisnis",
-            kontak: "Kontak",
-            email: "Email",
-            website: "Website",
-            alamat: "Alamat",
-        },
-        {
-            id: 2,
-            name: "Bayu",
-            bisnisName: "Nama Bisnis",
-            kontak: "Kontak",
-            email: "Email",
-            website: "Website",
-            alamat: "Alamat",
-        },
-        {
-            id: 3,
-            name: "Cindy",
             bisnisName: "Nama Bisnis",
             kontak: "Kontak",
             email: "Email",
@@ -67,12 +51,9 @@ function App() {
         })
     }
     const updateData = (id, updatedData) => {
-        setEditing(false);
-        setData( (datas.map( (data) => {
-            return(
-                data.id === id ? updatedData : data
-            )
-        })))
+        // setEditing(false);
+
+        setData(datas.map((dt) => (dt.id === id ? updatedData : dt)))
     }
     // Delete Data Pelanggan
     const deleteData = (id) => {
@@ -83,13 +64,21 @@ function App() {
         }))
     }
     return (
-        <div className="container mx-auto p-8" >
-            {editing ? (
-                <EditDataForm setEditing={setEditing} currentData={currentData} updateData={updateData} />
-            ) : (
-                <AddForm addData={addData} />
-            )}
-            <CardUser dataObj={datas} deleteData={deleteData} editData={editData} />
+        <div className='flex'>
+            <div className='basis-[20%] border'>
+                <SideNav />
+            </div>
+            <div className='basis-[80%] border'>
+                <TopNav />
+                <main className='px-6'>
+                    {editing ? (
+                        <EditDataForm setEditing={setEditing} currentData={currentData} updateData={updateData} />
+                    ) : (
+                        <AddForm addData={addData} />
+                    )}
+                    <CardUser dataObj={datas} deleteData={deleteData} editData={editData} />
+                </main>
+            </div>
         </div>
     );
 }
