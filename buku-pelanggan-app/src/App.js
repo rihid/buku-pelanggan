@@ -31,6 +31,7 @@ function App() {
     const [datas, setData] = useState(dataPelanggan);
     const [currentData, setCurrentData] = useState(initialFormState)
     const [editing, setEditing] = useState(false);
+    const [show, setShow] = useState(false);
 
     // Add Data Pelanggan
     const addData = (data) => {
@@ -69,13 +70,14 @@ function App() {
                 <SideNav />
             </div>
             <div className='basis-[80%] border'>
-                <TopNav />
+                <TopNav setShow={setShow} />
                 <main className='px-6'>
-                    {editing ? (
+                    {/* {editing ? (
                         <EditDataForm setEditing={setEditing} currentData={currentData} updateData={updateData} />
                     ) : (
-                        <AddForm addData={addData} />
-                    )}
+                        <AddForm addData={addData} show={show} />
+                    )} */}
+                    <AddForm addData={addData} show={show} setShow={setShow} />
                     <CardUser dataObj={datas} deleteData={deleteData} editData={editData} />
                 </main>
             </div>
