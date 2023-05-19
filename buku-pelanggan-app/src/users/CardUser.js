@@ -19,7 +19,7 @@ const cardUser = (props) => (
                         <button onClick={ () => {props.deleteData(data.id)}}>Delete</button>
                     </div> */}
                     <div className="flex items-center justify-center">
-                        <button className="flex items-center gap-2 rounded-full bg-[#008EEA] text-white h-10 px-4 w-3/5">
+                        <button className="flex items-center justify-center gap-2 rounded-full bg-[#008EEA] text-white h-10 px-4 w-3/5">
                             <span><FaEye /></span>
                             <span className="font-semibold">Detail</span>
                         </button>

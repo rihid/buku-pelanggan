@@ -17,33 +17,6 @@ function App() {
             website: "Website",
             alamat: "Alamat",
         },
-        {
-            id: 2,
-            name: "Agus",
-            bisnisName: "Nama Bisnis",
-            kontak: "Kontak",
-            email: "Email",
-            website: "Website",
-            alamat: "Alamat",
-        },
-        {
-            id: 3,
-            name: "Agus",
-            bisnisName: "Nama Bisnis",
-            kontak: "Kontak",
-            email: "Email",
-            website: "Website",
-            alamat: "Alamat",
-        },
-        {
-            id: 4,
-            name: "Agus",
-            bisnisName: "Nama Bisnis",
-            kontak: "Kontak",
-            email: "Email",
-            website: "Website",
-            alamat: "Alamat",
-        },
     ];
 
     const initialFormState = {
@@ -92,6 +65,7 @@ function App() {
             )
         }))
     }
+
     return (
         <div className='flex bg-[#F3F3F3]'>
             <div className='basis-[20%] border'>
