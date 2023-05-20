@@ -1,17 +1,18 @@
 import React from "react";
-import {BrowseRouter, Routes, Route} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import App from "../App";
-import Home from "../home/Home";
+import DetailUser from "../users/DetailUser";
 
 const Router = () => {
     return(
         <div>
-            <BrowseRouter>
-            <Routes>
-                <Route path='/' element={<App/>} >
-                </Route>
-            </Routes>
-            </BrowseRouter>
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<App/>} >
+                    </Route>
+                    <Route path="pelanggan/:id" element={<DetailUser/>}></Route>
+                </Routes>
+            </BrowserRouter>
         </div>
     )
 }

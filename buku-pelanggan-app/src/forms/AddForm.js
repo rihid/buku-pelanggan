@@ -24,7 +24,7 @@ const AddForm = (props) => {
         setDataAdd(initialFormState);
     }
 
-    if(!props.show){
+    if(!props.isShow){
         return null;
     }
 

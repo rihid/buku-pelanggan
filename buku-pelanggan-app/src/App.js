@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import CardUser from './users/CardUser';
 import AddForm from './forms/AddForm';
-import EditDataForm from './forms/EditDataForm';
 import SideNav from './nav-menu/SideNav';
 import TopNav from './nav-menu/TopNav';
 import DetailUser from './users/DetailUser';
@@ -10,6 +9,15 @@ function App() {
     const dataPelanggan = [
         {
             id: 1,
+            name: "Agus",
+            bisnisName: "Nama Bisnis",
+            kontak: "Kontak",
+            email: "Email",
+            website: "Website",
+            alamat: "Alamat",
+        },
+        {
+            id: 2,
             name: "Agus",
             bisnisName: "Nama Bisnis",
             kontak: "Kontak",
@@ -32,7 +40,7 @@ function App() {
     const [datas, setData] = useState(dataPelanggan);
     const [currentData, setCurrentData] = useState(initialFormState)
     const [editing, setEditing] = useState(false);
-    const [show, setShow] = useState(false);
+    const [isShow, setShow] = useState(false)
 
     // Add Data Pelanggan
     const addData = (data) => {
@@ -74,19 +82,10 @@ function App() {
             <div className='basis-[80%] border'>
                 <TopNav setShow={setShow} />
                 <main className='px-6'>
-                    {/* {editing ? (
-                        <EditDataForm setEditing={setEditing} currentData={currentData} updateData={updateData} />
-                    ) : (
-                        <AddForm addData={addData} show={show} />
-                    )} */}
-                    <AddForm addData={addData} show={show} setShow={setShow} />
+                    <AddForm addData={addData} isShow={isShow} setShow={setShow} />
                     <div className="pt-6">
                         <CardUser dataObj={datas} deleteData={deleteData} editData={editData} />
                     </div>
-                    <div className="pt-6">
-                        <DetailUser />
-                    </div>
-                    
                 </main>
             </div>
         </div>
