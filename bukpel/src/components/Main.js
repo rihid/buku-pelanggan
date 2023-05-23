@@ -67,8 +67,8 @@ const Main = () => {
         setCustomers(customers.map((dt) => (dt.id === id ? updatedData : dt)))
     };
     return(
-        <main className='px-6'>
-        <div className="pt-6">
+        <main className=''>
+        <div className="pt-4">
             <CardUser customers={customers} deleteCustomer={deleteCustomer} setShow={setShow} editRow={editRow} />
             {/* <DetailUser customers={customers} /> */}
             {editing ? (
