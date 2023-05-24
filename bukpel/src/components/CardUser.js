@@ -52,7 +52,7 @@ const CardUser = (props) => {
                 )}
 
             </div>
-            <Pagination />
+            <Pagination />  
         </>
 
     )
