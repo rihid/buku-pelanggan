@@ -24,6 +24,33 @@ const Main = () => {
             website: "Website",
             alamat: "Alamat",
         },
+        {
+            id: 3,
+            name: "Bayu",
+            bisnisName: "Nama Bisnis",
+            kontak: "Kontak",
+            email: "Email",
+            website: "Website",
+            alamat: "Alamat",
+        },
+        {
+            id: 4,
+            name: "Bayu",
+            bisnisName: "Nama Bisnis",
+            kontak: "Kontak",
+            email: "Email",
+            website: "Website",
+            alamat: "Alamat",
+        },
+        {
+            id: 5,
+            name: "Bayu",
+            bisnisName: "Nama Bisnis",
+            kontak: "Kontak",
+            email: "Email",
+            website: "Website",
+            alamat: "Alamat",
+        },
     ];
     const initialFormState = {
         id: null,
@@ -67,8 +94,7 @@ const Main = () => {
         setCustomers(customers.map((dt) => (dt.id === id ? updatedData : dt)))
     };
     return(
-        <main className=''>
-        <div className="pt-4">
+        <main>
             <CardUser customers={customers} deleteCustomer={deleteCustomer} setShow={setShow} editRow={editRow} />
             {/* <DetailUser customers={customers} /> */}
             {editing ? (
@@ -76,9 +102,7 @@ const Main = () => {
             ) : (   
                 <AddForm addCustomer={addCustomer} isShow={isShow} setShow={setShow} />
             )}
-            
-        </div>
-    </main>
+        </main>
     )
 }
 
