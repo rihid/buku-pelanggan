@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/buku-pelanggan/static/css/main.855aa2c1.css",
-    "main.js": "/buku-pelanggan/static/js/main.b2030f7f.js",
-    "static/media/ava.jpg": "/buku-pelanggan/static/media/ava.93f34cd80efb4d831cd2.jpg",
-    "index.html": "/buku-pelanggan/index.html",
-    "main.855aa2c1.css.map": "/buku-pelanggan/static/css/main.855aa2c1.css.map",
-    "main.b2030f7f.js.map": "/buku-pelanggan/static/js/main.b2030f7f.js.map"
+    "main.css": "/bukpel/static/css/main.855aa2c1.css",
+    "main.js": "/bukpel/static/js/main.9a770d82.js",
+    "static/media/ava.jpg": "/bukpel/static/media/ava.93f34cd80efb4d831cd2.jpg",
+    "index.html": "/bukpel/index.html",
+    "main.855aa2c1.css.map": "/bukpel/static/css/main.855aa2c1.css.map",
+    "main.9a770d82.js.map": "/bukpel/static/js/main.9a770d82.js.map"
   },
   "entrypoints": [
     "static/css/main.855aa2c1.css",
-    "static/js/main.b2030f7f.js"
+    "static/js/main.9a770d82.js"
   ]
 }
