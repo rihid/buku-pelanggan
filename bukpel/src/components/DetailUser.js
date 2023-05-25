@@ -1,5 +1,5 @@
 import React from "react";
-import { FaArrowLeft, FaPen, FaTrashAlt, FaStore } from "react-icons/fa";
+import { FaArrowLeft, FaPen, FaTrashAlt, FaStore, FaUserCircle } from "react-icons/fa";
 import avatar from "./../assets/ava.jpg"
 
 const DetailUser = (props) => {
@@ -13,12 +13,12 @@ const DetailUser = (props) => {
                     <li class="mr-6 flex items-center">
                         <a class="text-black-500 hover:text-blue-800" href="#"><FaPen /></a>
                     </li>
-                    <li class="mr-6 flaex items-center">
+                    <li class="mr-6 flex items-center">
                         <a class="text-black-500 hover:text-blue-800" href="#"><FaTrashAlt /></a>
                     </li>
                 </ul>
             </div>
-            <div className="px-8 py-6">
+            <div className="px-8 py-4">
                 <div className='flex items-center justify-start gap-6'>
                     <div>
                         <img src={avatar} alt="" className='object-contain w-24' />
@@ -32,10 +32,33 @@ const DetailUser = (props) => {
                             <span>Vania Store</span>
                         </p>
                     </div>
-                </div> 
+                </div>
+            </div>
+            <div className="px-8 py-6">
+                <ul className="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
+                    <li className="pb-3 sm:pb-4">
+                        <div className="flex items-center space-x-4">
+                            <div className="flex-shrink-0">
+                                <FaUserCircle />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                                <p className="text-sm font-semibold text-gray-900 truncate dark:text-white">
+                                    Nama Pelanggan
+                                </p>
+                            </div>
+                            <div className="flex-shrink-0">
+                                :
+                            </div>
+                            <div className="flex-1 min-w-0">
+                                <p className="text-sm font-semibold text-gray-900 truncate dark:text-white">
+                                    Vania Astuti
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
             <div className="px-6 pt-4 pb-2">
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
             </div>
         </div>
     )
