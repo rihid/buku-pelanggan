@@ -35,7 +35,27 @@ const DetailUser = (props) => {
                 </div>
             </div>
             <div className="px-8 py-6">
-                <ul className="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
+                <ul className="divide-y divide-gray-200">
+                    <li className="pb-3 sm:pb-4">
+                        <div className="flex items-center space-x-4">
+                            <div className="flex-shrink-0">
+                                <FaUserCircle />
+                            </div>
+                            <div className="flex-1">
+                                <p className="text-sm font-semibold text-gray-900 truncate">
+                                    Nama Pelanggan
+                                </p>
+                            </div>
+                            <div className="">
+                                :
+                            </div>
+                            <div className="flex-1">
+                                <p className="text-sm font-semibold text-gray-900 truncate">
+                                    Vania Astuti
+                                </p>
+                            </div>
+                        </div>
+                    </li>
                     <li className="pb-3 sm:pb-4">
                         <div className="flex items-center space-x-4">
                             <div className="flex-shrink-0">
