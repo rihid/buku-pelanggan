@@ -3,6 +3,7 @@ import { useOutletContext } from "react-router-dom";
 import CardUser from "./CardUser";
 import AddForm from "./AddForm";
 import EditForm from "./EditForm";
+import DetailUser from "./DetailUser";
 
 const Main = () => {
     const customersData = [
@@ -64,9 +65,8 @@ const Main = () => {
 
     const [customers, setCustomers] = useState(customersData);
     const [currentCustomer, setCurrentCustomer] = useState(initialFormState);
-    const [editing, setEditing] = useState(false)
+    const [editing, setEditing] = useState(false);
     const [isShow, setShow] = useOutletContext();
-    const [search, setSearch] = useOutletContext();
 
     // CRUD Operation
     const addCustomer = (customer) => {
@@ -97,7 +97,6 @@ const Main = () => {
     return(
         <main>
             <CardUser customers={customers} deleteCustomer={deleteCustomer} setShow={setShow} editRow={editRow} />
-            {/* <DetailUser customers={customers} /> */}
             {editing ? (
                 <EditForm currentCustomer={currentCustomer} updateData={updateData} setEditing={setEditing} />
             ) : (   

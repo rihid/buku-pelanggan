@@ -1,20 +1,28 @@
 import React from "react";
 import { FaArrowLeft, FaPen, FaTrashAlt, FaStore, FaUserCircle } from "react-icons/fa";
 import avatar from "./../assets/ava.jpg"
+import { Link, useParams } from "react-router-dom";
 
 const DetailUser = (props) => {
+    const params = useParams()
     return(
         <div className="w-full rounded overflow-hidden bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div className="px-8 py-6">
-                <ul class="flex">
-                    <li class="mr-6 flex items-center">
-                        <a class="text-black-500 hover:text-blue-800" href="#"><FaArrowLeft /></a>
+                <ul className="flex">
+                    <li className="mr-6 flex items-center">
+                        <Link className="text-black-500 hover:text-blue-800">
+                            <FaArrowLeft />
+                        </Link>
                     </li>
-                    <li class="mr-6 flex items-center">
-                        <a class="text-black-500 hover:text-blue-800" href="#"><FaPen /></a>
+                    <li className="mr-6 flex items-center">
+                        <Link className="text-black-500 hover:text-blue-800">
+                            <FaPen />
+                        </Link>
                     </li>
-                    <li class="mr-6 flex items-center">
-                        <a class="text-black-500 hover:text-blue-800" href="#"><FaTrashAlt /></a>
+                    <li className="mr-6 flex items-center">
+                        <Link className="text-black-500 hover:text-blue-800">
+                            <FaTrashAlt />
+                        </Link>
                     </li>
                 </ul>
             </div>
@@ -38,6 +46,26 @@ const DetailUser = (props) => {
                 <ul className="divide-y divide-gray-200">
                     <li className="pb-3 sm:pb-4">
                         <div className="flex items-center space-x-4">
+                            <div className="flex-shrink-0">
+                                <FaUserCircle />
+                            </div>
+                            <div className="flex-1">
+                                <p className="text-sm font-semibold text-gray-900 truncate">
+                                    Nama Pelanggan
+                                </p>
+                            </div>
+                            <div className="">
+                                :
+                            </div>
+                            <div className="flex-1">
+                                <p className="text-sm font-semibold text-gray-900 truncate">
+                                    Vania Astuti
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="pb-3 sm:pb-4">
+                        <div className="flex items-center space-x-4 mt-3">
                             <div className="flex-shrink-0">
                                 <FaUserCircle />
                             </div>
