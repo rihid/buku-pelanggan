@@ -1,8 +1,8 @@
 {
   "name": "bukpel",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://rihid.github.io/buku-pelanggan",
+  "private": false,
+  "homepage": "https://rihid.github.io/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
