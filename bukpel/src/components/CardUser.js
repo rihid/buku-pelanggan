@@ -23,7 +23,7 @@ const CardUser = (props) => {
                     })
                     .map((data) => (
                         <div
-                        className="block rounded-lg bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700" key={data.id}>
+                        className="block rounded-lg bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]" key={data.id}>
                             <div className="flex flex-col items-center justify-center">
                                 <div>
                                     <img src={avatar} alt="" className='w-24' />
